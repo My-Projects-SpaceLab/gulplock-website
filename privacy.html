@@ -33,7 +33,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="meta">GulpLock · Effective date: August 24, 2026<br>
+<p class="meta">GulpLock · Effective date: October 20, 2026<br>
 Service Provider: Akshay Varala · Contact: <a href="mailto:20akki02@gmail.com">20akki02@gmail.com</a></p>
 
 <p>This privacy policy applies to the <strong>GulpLock</strong> mobile application and any related services operated by Akshay Varala (the “Application”, “we”, “us”).</p>
@@ -51,7 +51,7 @@ Service Provider: Akshay Varala · Contact: <a href="mailto:20akki02@gmail.com">
   <li>Schedule settings (start time, end time, interval)</li>
   <li>App preferences and onboarding state</li>
   <li>Postpone / skip usage counts (to enforce Free limits)</li>
-  <li>Verified still images in the optional Pro proof gallery</li>
+  <li>Proof photos: a still image saved after each successful verification (see Section 1.2)</li>
 </ul>
 <p>This information stays on your device unless a feature below says otherwise.</p>
 
@@ -64,11 +64,16 @@ Service Provider: Akshay Varala · Contact: <a href="mailto:20akki02@gmail.com">
 </ul>
 <p><strong>GulpLock uses on-device machine-learning and computer-vision models for object detection, face detection, hand/wrist positioning, and recognition of actions such as holding or drinking from a container. Processing occurs locally on the device. Camera frames are not uploaded to GulpLock, Firebase, RevenueCat, or any cloud-based AI service.</strong></p>
 <p>Camera frames are analyzed in memory for the verification step only.</p>
-<p>If you use Pro and enable the proof gallery, a still image may be saved <strong>only on your device</strong>. You can delete those images at any time from within the app. We never receive them.</p>
+<p>When a verification succeeds, a still image is saved <strong>only on your device</strong> and appears in your proof gallery. This applies to all users. Free keeps up to 45 active days and Pro keeps up to 90, and older photos are removed automatically. Older days are blurred for Free users. Pro users can delete individual photos inside the app. Anyone can delete all photos by clearing the app's data or uninstalling it. We never receive these images.</p>
 <p class="note"><strong>No hydration history.</strong> Camera verification is used only to stop the current reminder. GulpLock does not use it to create a drinking log, measure water intake, track streaks, or build a personal health profile.</p>
 
 <h3>1.3 Alarms and reminders</h3>
 <p>GulpLock schedules alarms and reminder sounds through Android system services so the sound can start at the times you set and continue until you complete verification (or use an allowed postpone). These reminders are application functionality, not medical alerts. They do not require location access.</p>
+<ul>
+  <li><strong>Notifications and full-screen screen:</strong> while the sound plays, a persistent notification is shown. When your phone is locked, the verification screen may appear full screen. You can leave it with the Home or Back button.</li>
+  <li><strong>Background and restart:</strong> a foreground service keeps the sound playing, and alarms are rescheduled after your phone restarts. The app may ask to be excluded from battery optimization so alarms are on time.</li>
+  <li><strong>Activity recognition:</strong> GulpLock uses Android's activity recognition only to detect when you are in a vehicle or on a bicycle, so reminders can pause while you travel. This is evaluated on your device. The detected activity is not stored, shown as health or fitness data, or sent off your device.</li>
+</ul>
 
 <h3>1.4 Automatically collected technical data</h3>
 <p>When you use the Application, certain technical information may be collected through third-party services we use (see Section 3), for example:</p>
@@ -77,6 +82,7 @@ Service Provider: Akshay Varala · Contact: <a href="mailto:20akki02@gmail.com">
   <li>Crash logs and diagnostic data</li>
   <li>Anonymous or pseudonymous usage events (e.g. screens opened, feature used)</li>
   <li>Purchase / subscription entitlement status</li>
+  <li>Device identifiers used by Firebase and RevenueCat, such as an app instance ID and, where available, the Android advertising ID. We use them for analytics and subscription management, not to show ads</li>
 </ul>
 <p>We do not use this data to identify you personally beyond what is needed for stability, analytics, and subscription management.</p>
 
@@ -118,14 +124,14 @@ Service Provider: Akshay Varala · Contact: <a href="mailto:20akki02@gmail.com">
 </ul>
 
 <!-- ========== RIGHTS & DELETION ========== -->
-<h2>6. Your rights and data deletion</h2>
+<h2 id="delete-data">6. Your rights and how to delete your data</h2>
 <p>Depending on where you live, you may have rights to access, correct, delete, or restrict processing of personal data, or to withdraw consent.</p>
 <p><strong>How to delete data related to GulpLock:</strong></p>
 <ul>
   <li><strong>Local schedule &amp; settings:</strong> Uninstall the app, or clear the app’s data in system settings.</li>
   <li><strong>Proof gallery photos:</strong> Delete them inside the app (Pro), or uninstall the app.</li>
   <li><strong>Camera access:</strong> Revoke permission in system settings. Verification will stop working.</li>
-  <li><strong>Analytics / crash data held by us or our providers:</strong> Email <a href="mailto:20akki02@gmail.com">20akki02@gmail.com</a> and we will process your request as required by law.</li>
+  <li><strong>Analytics / crash data held by us or our providers:</strong> Email <a href="mailto:20akki02@gmail.com">20akki02@gmail.com</a> with the subject "GulpLock data deletion request". We will delete or anonymize the data we can link to you within 30 days, except where the law requires us to keep it.</li>
   <li><strong>Subscriptions:</strong> Cancel in Google Play (or App Store) account settings. Refunds follow the store’s policies.</li>
 </ul>
 <p>California residents (CCPA/CPRA): You may request to know, delete, or opt out of sale/sharing of personal information. We do not sell personal information. Contact us at the email above to exercise these rights.</p>
@@ -161,7 +167,4 @@ Service Provider: Akshay Varala · Contact: <a href="mailto:20akki02@gmail.com">
 Email: <a href="mailto:20akki02@gmail.com">20akki02@gmail.com</a></p>
 
 <hr>
-<p style="font-size:0.85em;color:#666;">This policy was prepared specifically for GulpLock and replaces generic generator text where it did not match the product.</p>
-
-</body>
 </html>
