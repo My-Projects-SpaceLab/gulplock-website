@@ -178,21 +178,25 @@
   }
 
   .phone-stage{display:flex;flex-direction:column;align-items:center;}
-  .phone{
-    width:200px;height:400px;
-    background:var(--surface-2);
+    .phone{
+    width:220px;aspect-ratio:9/19;
+    background:linear-gradient(165deg,#222226 0%,var(--surface-2) 40%,#111113 100%);
     border:1.5px solid var(--line-strong);
-    border-radius:30px;
-    position:relative;overflow:hidden;
-    box-shadow:0 36px 70px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.04);
+    border-radius:34px;
+    position:relative;
+    box-shadow:0 40px 80px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.12);
   }
+  .phone::before,.phone::after{content:'';position:absolute;width:3px;background:var(--line-strong);border-radius:2px;}
+  .phone::before{left:-4px;top:96px;height:34px;}
+  .phone::after{right:-4px;top:122px;height:52px;}
   .phone-notch{
     position:absolute;top:11px;left:50%;transform:translateX(-50%);
     width:68px;height:20px;background:#000;border-radius:11px;z-index:2;
   }
-  .phone-screen{
-    height:100%;padding:48px 16px 22px;
-    display:flex;flex-direction:column;align-items:center;
+    .phone-screen{
+    height:100%;padding:36px 16px 22px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border-radius:32px;overflow:hidden;
     background:linear-gradient(180deg,#0e0e12 0%,#0a0a0c 100%);
   }
   .phone-label{
@@ -203,7 +207,7 @@
   .phone-time{
     font-family:'JetBrains Mono',monospace;
     font-size:38px;font-weight:600;color:var(--drip);
-    font-variant-numeric:tabular-nums;margin-bottom:6px;
+    font-variant-numeric:tabular-nums;margin-bottom:6px;     text-shadow:0 0 26px rgba(61,232,255,0.3);
   }
   .phone-status{font-size:12px;color:#8eefff;margin-bottom:26px;}
   .drop-visual{
@@ -612,7 +616,7 @@
         <div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="phone-label">Sounding now</div>
-          <div class="phone-time">00:00</div>
+          <div class="phone-time" id="phoneTime">00:00</div>
           <div class="phone-status">It will not stop on its own</div>
           <div class="drop-visual"><div class="drop-core"></div></div>
           <div class="phone-hint">Front camera waits for a few real seconds of drinking</div>
