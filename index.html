@@ -383,7 +383,23 @@
     font-family:'JetBrains Mono',monospace;
     font-size:11px;color:var(--text-3);letter-spacing:0.04em;
   }
-  .img-ph .ph-hint{font-size:12px;color:var(--text-3);max-width:130px;line-height:1.4;}
+    .img-ph .ph-hint{font-size:12px;color:var(--text-3);max-width:130px;line-height:1.4;}
+  .img-ph.filled,.img-ph-center.filled{
+    position:relative;padding:0;overflow:hidden;
+    border:1px solid var(--line-strong);
+    background:var(--surface);
+    box-shadow:0 24px 48px rgba(0,0,0,0.45);
+  }
+  .img-ph.filled img,.img-ph-center.filled img{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .img-ph .ph-tag{
+    position:absolute;left:10px;bottom:10px;
+    background:rgba(9,9,11,0.8);border:1px solid var(--line);
+    border-radius:100px;padding:5px 11px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--text);
+  }
 
   .cap-stack{max-width:580px;margin:0 auto 36px;}
   .cap-line{
@@ -598,7 +614,7 @@
           <div class="phone-time">00:00</div>
           <div class="phone-status">It will not stop on its own</div>
           <div class="drop-visual"><div class="drop-core"></div></div>
-          <div class="phone-hint">Front camera waits for 2.5 real seconds of drinking</div>
+          <div class="phone-hint">Front camera waits for a few real seconds of drinking</div>
         </div>
       </div>
       <div class="phone-base"></div>
@@ -616,12 +632,12 @@
       <div class="clarify-card no">
         <span class="tag">Not this</span>
         <h3>Not a lockout</h3>
-        <p>Your phone stays completely usable. No frozen screen. No blocked messages. No blocked apps. No forced full-screen interruption.</p>
+        <p>Your phone stays usable. No blocked messages, no blocked apps, and you can leave the screen any time with Home or Back. If your phone is locked when the sound starts, the verification screen may appear full screen.</p>
       </div>
       <div class="clarify-card yes">
         <span class="tag">Actually this</span>
         <h3>A drip that stays</h3>
-        <p>One small water-drop sound repeats, gently, until your front camera confirms 2.5 real seconds of drinking. Then it’s gone — quiet again, until the next one.</p>
+        <p>One small water-drop sound repeats, gently, until your front camera confirms a few real seconds of drinking. Then it’s gone — quiet again, until the next one.</p>
       </div>
     </div>
   </div>
@@ -633,11 +649,11 @@
       <div class="sec-head">
         <span class="sec-eyebrow">First open</span>
         <h2>What you’ll see<br>the first time</h2>
-        <p>This is the actual popup shown once, the first time you open the app.</p>
+        <p>This is the welcome screen you see once, the first time you open the app.</p>
       </div>
-      <div class="img-ph-center">
-        <div class="ph-icon">📱</div>
-        <div class="ph-label">Popup screenshot</div>
+            <div class="img-ph-center filled">
+        <img src="images/first-open.webp" alt="GulpLock welcome screen shown the first time the app opens" width="540" height="960" loading="lazy" decoding="async">
+      </div>
       </div>
     </div>
   </div>
@@ -647,7 +663,7 @@
   <div class="wrap reveal">
     <div class="honesty">
       <p>You can fake this.</p>
-      <p>Open your mouth with the bottle nearby. Hold it for 2.5 seconds. The sound stops.</p>
+      <p>Open your mouth with the bottle nearby. Hold it for few seconds. The sound stops.</p>
       <p class="win">You win.</p>
       <p>But… why would you?</p>
       <p>You came here because you want to drink more water. GulpLock isn’t here to police you or prove anything to anyone.</p>
@@ -680,7 +696,7 @@
       <div class="flow-step">
         <div class="num">STATE 03</div>
         <h4>Verifying</h4>
-        <p>Front camera opens. It’s watching for one thing: 2.5 real seconds of a drink.</p>
+        <p>Front camera opens. It’s watching for one thing: a few real seconds of a drink.</p>
       </div>
       <div class="flow-step">
         <div class="num">STATE 04</div>
@@ -690,20 +706,17 @@
     </div>
 
     <div class="img-placeholders">
-      <div class="img-ph">
-        <div class="ph-icon">①</div>
-        <div class="ph-label">Scheduled</div>
-        <div class="ph-hint">Screenshot of quiet countdown</div>
+            <div class="img-ph filled">
+        <img src="images/scheduled.webp" alt="GulpLock guide helping you set your start time, end time and time between sounds" width="540" height="960" loading="lazy" decoding="async">
+        <span class="ph-tag">① Scheduled</span>
       </div>
-      <div class="img-ph">
-        <div class="ph-icon">②</div>
-        <div class="ph-label">Sounding</div>
-        <div class="ph-hint">Screenshot of active water-drop</div>
+            <div class="img-ph filled">
+        <img src="images/sounding.webp" alt="GulpLock alarm screen saying Time to drink with a Verify button" width="540" height="960" loading="lazy" decoding="async">
+        <span class="ph-tag">② Sounding</span>
       </div>
-      <div class="img-ph">
-        <div class="ph-icon">③</div>
-        <div class="ph-label">Verifying</div>
-        <div class="ph-hint">Screenshot of camera check</div>
+            <div class="img-ph filled">
+        <img src="images/verifying.webp" alt="A verified proof photo of a user drinking water" width="540" height="960" loading="lazy" decoding="async">
+        <span class="ph-tag">③ Verifying</span>
       </div>
     </div>
   </div>
@@ -831,7 +844,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">Does the camera upload anything?<span class="plus">+</span></div>
-        <div class="faq-a">No. Verification runs on-device. Frames are processed locally. Verified photos are saved to the on-device gallery (Pro feature). Nothing is uploaded to the cloud.</div>
+        <div class="faq-a">No. Verification runs on-device. Frames are processed locally. Verified photos are saved only on your device. Everyone gets a proof gallery, and Pro keeps a longer history. Nothing is uploaded to the cloud.</div>
       </div>
     </div>
   </div>
